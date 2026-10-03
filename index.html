@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="첫 생일" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="theme-color" content="#f4efe6" />
+    <title>첫 생일 사진첩</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Serif+KR:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <header class="brand">
+          <div class="brand-copy">
+            <p class="eyebrow" id="album-eyebrow">돌잔치</p>
+            <h1 id="album-title">첫 생일</h1>
+          </div>
+          <p class="subtitle" id="album-subtitle">2025.10 — 2026.09</p>
+        </header>
+
+        <nav class="month-nav" aria-label="월별 목차">
+          <ol class="month-list" id="month-list"></ol>
+        </nav>
+
+        <p class="sidebar-foot">
+          <span id="counter">1 / 60</span>
+          <span id="preload-status" class="preload-status" hidden></span>
+        </p>
+      </aside>
+
+      <main class="stage">
+        <div class="swiper" id="album-swiper">
+          <div class="swiper-wrapper" id="swiper-wrapper"></div>
+        </div>
+
+        <button class="nav-btn nav-prev" type="button" aria-label="이전 사진">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M14.5 5.5 8 12l6.5 6.5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <button class="nav-btn nav-next" type="button" aria-label="다음 사진">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M9.5 5.5 16 12l-6.5 6.5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+
+        <div class="filmstrip" id="filmstrip" aria-label="이 달의 사진"></div>
+
+        <div class="progress" aria-hidden="true">
+          <span id="progress-bar"></span>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
