@@ -80,6 +80,10 @@ button {
   line-height: 1.35;
 }
 
+.title-line {
+  display: block;
+}
+
 .subtitle {
   margin: 10px 0 0;
   color: var(--ink-soft);

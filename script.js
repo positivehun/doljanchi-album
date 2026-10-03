@@ -18,7 +18,8 @@ const PREFER_LOCAL_IMAGES = true;
 
 const ALBUM = {
   eyebrow: "",
-  title: "은하의 돌잔치 앨범",
+  title: "은하의 성장일기",
+  titleLines: ["은하의", "성장일기"],
   subtitle: "2025.10 — 2026.09",
 };
 
@@ -392,7 +393,15 @@ async function init() {
   }
 
   document.getElementById("album-eyebrow").textContent = ALBUM.eyebrow;
-  document.getElementById("album-title").textContent = ALBUM.title;
+  const titleEl = document.getElementById("album-title");
+  titleEl.replaceChildren(
+    ...ALBUM.titleLines.map((line) => {
+      const span = document.createElement("span");
+      span.className = "title-line";
+      span.textContent = line;
+      return span;
+    })
+  );
   document.getElementById("album-subtitle").textContent = ALBUM.subtitle;
   document.title = ALBUM.title;
 
