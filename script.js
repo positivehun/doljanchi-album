@@ -17,8 +17,8 @@
 const PREFER_LOCAL_IMAGES = true;
 
 const ALBUM = {
-  eyebrow: "돌잔치",
-  title: "첫 생일",
+  eyebrow: "",
+  title: "은하의 돌잔치 앨범",
   subtitle: "2025.10 — 2026.09",
 };
 
@@ -394,7 +394,7 @@ async function init() {
   document.getElementById("album-eyebrow").textContent = ALBUM.eyebrow;
   document.getElementById("album-title").textContent = ALBUM.title;
   document.getElementById("album-subtitle").textContent = ALBUM.subtitle;
-  document.title = `${ALBUM.title} 사진첩`;
+  document.title = ALBUM.title;
 
   const months = buildMonths();
   const slides = buildSlides(months);
